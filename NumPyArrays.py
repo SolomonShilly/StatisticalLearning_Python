@@ -67,3 +67,18 @@ squares = s ** 2
 fractionalExponent = s ** 0.5
 print(f"\nThe squares of {s} are {squares}")
 print(f"s to the 1/2 power is: {fractionalExponent}")
+
+rng = np.random.default_rng(1303)
+
+a = rng.normal(size=50)
+b = rng.normal(loc=50, scale=1, size=50)
+correlation = np.corrcoef(a,b)
+print("The correlation of matrix a and b is:\n", correlation)
+
+meanCor = np.mean(correlation)
+varCor = np.var(correlation)
+stdCor = np.std(correlation)
+
+print(f"\nMean of corr matric is {meanCor}")
+print(f"Variance of corr matric is {varCor}")
+print(f"Standard Deviation of corr matric is {stdCor}")
